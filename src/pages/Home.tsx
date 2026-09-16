@@ -144,7 +144,7 @@ export default function Home() {
           {[
             "TypeScript", "React", "Node.js", "PostgreSQL",
             "Docker", "AWS", "GraphQL", "Redis",
-            "Figma", "Next.js", "Prisma", "Tailwind",
+            "Next.js", "Prisma", "Tailwind",
           ].map((tech) => (
             <div
               key={tech}
