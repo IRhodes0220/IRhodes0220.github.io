@@ -3,75 +3,35 @@ import { useState } from "react";
 const projects = [
   {
     id: 1,
-    name: "NexusDB",
-    category: "BACKEND",
-    tags: ["TypeScript", "Node.js", "PostgreSQL", "Redis"],
-    description: "A high-performance query layer built on top of PostgreSQL with intelligent caching via Redis. Supports real-time subscriptions, complex joins, and a GraphQL-like query syntax. Ships with a CLI for schema migrations.",
-    status: "LIVE",
-    year: "2025",
-    github: "https://github.com",
-    demo: "https://demo.example.com",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=340&fit=crop&auto=format",
+    name: "",
+    category: "",
+    tags: [""],
+    description: "",
+    status: "",
+    year: "",
+    github: "",
+    demo: "",
+    image: "",
   },
   {
     id: 2,
-    name: "Meridian UI",
-    category: "FRONTEND",
-    tags: ["React", "TypeScript", "Storybook", "Tailwind"],
-    description: "An accessible, composable React component library with 60+ components. Built with design-token theming from the ground up. Full Storybook documentation and WCAG 2.1 AA compliance throughout.",
-    status: "LIVE",
-    year: "2025",
-    github: "https://github.com",
-    demo: "https://demo.example.com",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=340&fit=crop&auto=format",
+ 
   },
   {
     id: 3,
-    name: "FluxPipeline",
-    category: "DEVOPS",
-    tags: ["Docker", "GitHub Actions", "AWS", "Terraform"],
-    description: "An opinionated CI/CD pipeline template for Node.js microservices. Auto-provisions infrastructure with Terraform, runs parallel test suites, and deploys blue-green to ECS. Cut our deploy cycle from 40 min to 8 min.",
-    status: "LIVE",
-    year: "2024",
-    github: "https://github.com",
-    demo: null,
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=340&fit=crop&auto=format",
+  
   },
   {
     id: 4,
-    name: "CoWrite",
-    category: "FULLSTACK",
-    tags: ["React", "Node.js", "WebSockets", "CRDT"],
-    description: "Real-time collaborative code editor built with Conflict-free Replicated Data Types for seamless multi-user editing. Supports syntax highlighting for 30+ languages and operational transform for offline-first sync.",
-    status: "ARCHIVED",
-    year: "2024",
-    github: "https://github.com",
-    demo: null,
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=340&fit=crop&auto=format",
+   
   },
   {
     id: 5,
-    name: "Archivist",
-    category: "FRONTEND",
-    tags: ["Next.js", "Prisma", "PostgreSQL", "Vercel"],
-    description: "A personal knowledge management tool with smart tagging, full-text search, and Markdown editing. Includes browser extension for web clipping and a public API for integrations.",
-    status: "LIVE",
-    year: "2024",
-    github: "https://github.com",
-    demo: "https://demo.example.com",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=340&fit=crop&auto=format",
+
   },
   {
     id: 6,
-    name: "PulseMonitor",
-    category: "DEVOPS",
-    tags: ["Python", "Prometheus", "Grafana", "AWS"],
-    description: "Lightweight uptime and performance monitoring for web services. Sends alerts via Slack and PagerDuty. Tracks response times, error rates, and custom business metrics with historical charting.",
-    status: "WIP",
-    year: "2026",
-    github: "https://github.com",
-    demo: null,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=340&fit=crop&auto=format",
+
   },
 ];
 
@@ -196,6 +156,9 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
           )}
         </div>
       </div>
+    </div>
+  );
+}
     </div>
   );
 }
