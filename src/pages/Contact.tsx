@@ -113,11 +113,10 @@ export default function Contact() {
             <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-[var(--primary)]" />
             <p className="font-mono-cyber text-[10px] text-[var(--primary)] mb-4 tracking-widest">CONTACT_INFO</p>
             {[
-              { label: "EMAIL", value: "jane@example.com", href: "mailto:jane@example.com" },
-              { label: "LOCATION", value: "San Francisco, CA", href: null },
-              { label: "TIMEZONE", value: "UTC-8 (PST)", href: null },
+              { label: "EMAIL", value: "Isa.Rhodes0220@gmail.com", href: "Isa.Rhodes0220@gmail.com" },
+              { label: "LOCATION", value: "Augusta, GA", href: null },
+              { label: "TIMEZONE", value: "GMT-4 (EST)", href: null },
               { label: "AVAILABILITY", value: "Open to Work", href: null },
-              { label: "RESPONSE", value: "24–48 hours", href: null },
             ].map(({ label, value, href }) => (
               <div key={label} className="flex justify-between py-2 border-b border-[var(--border)]/40 last:border-0">
                 <span className="font-mono-cyber text-[10px] text-[var(--muted-foreground)]">{label}</span>
@@ -133,10 +132,7 @@ export default function Contact() {
           <div className="border border-[var(--border)] bg-[var(--card)] p-5">
             <p className="font-mono-cyber text-[10px] text-[var(--primary)] mb-4 tracking-widest">SOCIAL_LINKS</p>
             {[
-              { platform: "GitHub", handle: "@jane-smith", url: "https://github.com" },
-              { platform: "LinkedIn", handle: "jane-smith-eng", url: "https://linkedin.com" },
-              { platform: "Twitter/X", handle: "@janesmith_dev", url: "https://twitter.com" },
-              { platform: "Dev.to", handle: "janesmith", url: "https://dev.to" },
+              { platform: "GitHub", handle: "@IRhodes0220", url: "https://github.com" },
             ].map(({ platform, handle, url }) => (
               <a
                 key={platform}
@@ -155,7 +151,6 @@ export default function Contact() {
             <p className="font-mono-cyber text-[10px] text-[var(--primary)] mb-3 tracking-widest">PREFERRED_CONTACT</p>
             <p className="text-xs text-[var(--muted-foreground)] leading-relaxed">
               Email is the fastest way to reach me for serious inquiries.
-              For quick questions, Twitter DMs are fine.
             </p>
           </div>
         </div>
@@ -186,3 +181,4 @@ function Field({
     </div>
   );
 }
+
