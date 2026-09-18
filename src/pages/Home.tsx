@@ -1,13 +1,8 @@
-import { Link } from "react-router";
+mport { Link } from "react-router";
 import { useEffect, useState } from "react";
 
 const ticker = [
-  "FULL_STACK_ENGINEER",
-  "REACT_SPECIALIST",
-  "NODE_JS_DEVELOPER",
   "OPEN_TO_WORK",
-  "TYPESCRIPT_ADVOCATE",
-  "UI_UX_ENTHUSIAST",
 ];
 
 function TypewriterText({ text }: { text: string }) {
@@ -62,9 +57,9 @@ export default function Home() {
             </div>
 
             {/* name */}
-            <h1 className="font-display font-bold text-5xl sm:text-7xl md:text-8xl leading-none tracking-tight mb-4 glitch-container flicker" data-text="JANE SMITH">
-              JANE<br />
-              <span className="text-[var(--primary)] neon-text">SMITH</span>
+            <h1 className="font-display font-bold text-5xl sm:text-7xl md:text-8xl leading-none tracking-tight mb-4 glitch-container flicker" data-text="Isa Rhodes">
+              Isa<br />
+              <span className="text-[var(--primary)] neon-text">Rhodes</span>
             </h1>
 
             {/* dynamic role */}
@@ -75,9 +70,7 @@ export default function Home() {
             </div>
 
             <p className="text-[var(--muted-foreground)] max-w-lg leading-relaxed mb-10 text-sm md:text-base">
-              I build fast, accessible, and visually sharp web applications.
-              5 years turning requirements into production code — from pixel-perfect
-              UIs to distributed backend systems.
+            
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -102,10 +95,7 @@ export default function Home() {
               <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[var(--primary)]" />
               <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[var(--primary)]" />
               {[
-                { label: "YEARS_EXP", value: "05" },
-                { label: "PROJECTS", value: "32+" },
-                { label: "COMMITS", value: "4.2K" },
-                { label: "COFFEE_L", value: "∞" },
+
               ].map((s) => (
                 <div key={s.label} className="mb-4 last:mb-0">
                   <div className="font-mono-cyber text-[10px] text-[var(--muted-foreground)] mb-0.5">
@@ -142,9 +132,8 @@ export default function Home() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
           {[
-            "TypeScript", "React", "Node.js", "PostgreSQL",
-            "Docker", "AWS", "GraphQL", "Redis",
-            "Next.js", "Prisma", "Tailwind",
+            "C++", "C#", "Javascript", "Phython",
+            "Sql", "Unity", "Blender",
           ].map((tech) => (
             <div
               key={tech}
@@ -164,7 +153,7 @@ export default function Home() {
               READY TO <span className="text-[var(--primary)] neon-text">BUILD</span> SOMETHING?
             </h2>
             <p className="font-mono-cyber text-xs text-[var(--muted-foreground)]">
-              Available for full-time roles and select freelance projects.
+              Available for any roles and select freelance projects.
             </p>
           </div>
           <Link
@@ -178,3 +167,4 @@ export default function Home() {
     </div>
   );
 }
+

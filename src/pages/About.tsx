@@ -1,7 +1,6 @@
 export default function About() {
   const interests = [
-    "Open Source", "Systems Design", "Game Dev", "3D Graphics",
-    "Mechanical Keyboards", "Synthwave Music", "Competitive Programming",
+    "Open Source", "Systems Design", "Game Dev", "3D Graphics"
   ];
 
   return (
@@ -22,38 +21,29 @@ export default function About() {
               <div className="w-24 h-24 border border-[var(--primary)] neon-border overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&auto=format"
-                  alt="Jane Smith — software engineer"
+                  alt="Isa Rhodes — software engineer"
                   className="w-full h-full object-cover grayscale"
                 />
               </div>
               <div className="absolute -bottom-1 -right-1 w-24 h-24 border border-[var(--border)] -z-10" />
             </div>
             <div>
-              <h2 className="font-display font-bold text-2xl tracking-wide mb-1">JANE SMITH</h2>
-              <p className="font-mono-cyber text-xs text-[var(--primary)] mb-1">SENIOR SOFTWARE ENGINEER</p>
+              <h2 className="font-display font-bold text-2xl tracking-wide mb-1">Isa Rhodes</h2>
+              <p className="font-mono-cyber text-xs text-[var(--primary)] mb-1"></p>
               <p className="font-mono-cyber text-[10px] text-[var(--muted-foreground)]">
-                📍 San Francisco, CA · Remote-Friendly
+                📍 Augusta, GA · Remote-Friendly
               </p>
             </div>
           </div>
 
           <div className="space-y-4 text-[var(--muted-foreground)] text-sm leading-relaxed border-l-2 border-[var(--border)] pl-5">
             <p>
-              I'm a software engineer with 5 years of professional experience building
-              high-performance web applications. My focus is on the full stack — from
-              architecting reliable backend APIs to crafting interfaces that feel
-              genuinely good to use.
+              I am freshly graduated computer programer with interests in furthering my 
+              carrer in both front and back in development. I have skills in C#, C++, Html and CSS
+              with some proficiency in java, javascript, phython and QSL.
             </p>
             <p>
-              Before going professional I spent years deep in open-source communities,
-              contributing to UI libraries and developer tooling. That background
-              shaped how I think about code quality, documentation, and building
-              things that other developers can actually work with.
-            </p>
-            <p>
-              I care deeply about performance, accessibility, and the kind of
-              attention to detail that separates good software from great software.
-              I'm most energized working on teams that share those values.
+              I care deeply about performance and accessibility.
             </p>
           </div>
 
@@ -80,12 +70,12 @@ export default function About() {
             <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-[var(--primary)]" />
             <p className="font-mono-cyber text-[10px] text-[var(--primary)] mb-4 tracking-widest">SYS_INFO</p>
             {[
-              { key: "NAME", val: "Jane Smith" },
-              { key: "ROLE", val: "Sr. Engineer" },
-              { key: "EXP", val: "5 Years" },
-              { key: "LOCATION", val: "SF, CA" },
+              { key: "NAME", val: "Isa Rhodes" },
+              { key: "ROLE", val: "" },
+              { key: "EXP", val: "" },
+              { key: "LOCATION", val: "Augusta, GA" },
               { key: "STATUS", val: "Open to Work" },
-              { key: "PREF", val: "Remote / Hybrid" },
+              { key: "PREF", val: "any" },
             ].map(({ key, val }) => (
               <div key={key} className="flex justify-between py-2 border-b border-[var(--border)]/40 last:border-0">
                 <span className="font-mono-cyber text-[10px] text-[var(--muted-foreground)]">{key}</span>
@@ -101,8 +91,6 @@ export default function About() {
               "Clean, readable code",
               "Thoughtful UX decisions",
               "Clear communication",
-              "Ship and iterate",
-              "Leave it better",
             ].map((v, i) => (
               <div key={v} className="flex items-center gap-2 py-1.5">
                 <span className="font-mono-cyber text-[10px] text-[var(--primary)]">{String(i + 1).padStart(2, "0")}</span>
@@ -123,10 +111,7 @@ export default function About() {
 
         <div className="space-y-0">
           {[
-            { year: "2024–PRESENT", role: "Senior Software Engineer", company: "NeuralEdge Inc.", desc: "Leading frontend architecture for a real-time analytics platform serving 50K+ daily users. Reduced bundle size by 40% and improved core web vitals scores across the board." },
-            { year: "2022–2024", role: "Software Engineer II", company: "Apex Digital", desc: "Built and maintained a suite of React micro-frontends. Introduced TypeScript and a shared component library that cut UI development time by 30%." },
-            { year: "2021–2022", role: "Software Engineer I", company: "Stackbase", desc: "Full-stack development on a SaaS project management tool. Owned the notification system and user permissions model end-to-end." },
-            { year: "2021", role: "B.Sc. Computer Science", company: "UC Berkeley", desc: "Graduated with honors. Focus on distributed systems and human-computer interaction. Senior capstone: a collaborative code editor with real-time sync." },
+            { year: "PRESENT", role: "", company: "", desc: "" },
           ].map((item, i) => (
             <div key={i} className="grid md:grid-cols-[180px_1fr] gap-4 md:gap-8 border-b border-[var(--border)]/40 py-5 last:border-0">
               <div>
@@ -141,6 +126,9 @@ export default function About() {
           ))}
         </div>
       </div>
+    </div>
+  );
+}
     </div>
   );
 }

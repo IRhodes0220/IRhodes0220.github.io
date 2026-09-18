@@ -22,38 +22,13 @@ export default function Resume() {
           <Section title="WORK_EXPERIENCE" index="A">
             {[
               {
-                role: "Senior Software Engineer",
-                company: "NeuralEdge Inc.",
-                period: "Jan 2024 – Present",
-                location: "San Francisco, CA (Remote)",
+                role: "N/A",
+                company: "N/A",
+                period: "N/A",
+                location: "N/A",
                 bullets: [
-                  "Architected and led the migration of a legacy Angular codebase to React 18 + TypeScript, improving LCP by 48%.",
-                  "Designed a real-time data pipeline with WebSockets and Redis Pub/Sub handling 200K+ events/day.",
-                  "Mentored 3 junior engineers; established team-wide code review standards and PR templates.",
-                  "Reduced CI pipeline duration from 18 minutes to 6 minutes by parallelizing test suites.",
-                ],
-              },
-              {
-                role: "Software Engineer II",
-                company: "Apex Digital",
-                period: "Mar 2022 – Dec 2023",
-                location: "New York, NY (Hybrid)",
-                bullets: [
-                  "Built a shared React component library used across 5 product teams; documented with Storybook.",
-                  "Introduced TypeScript across the frontend codebase and trained the team on strict typing patterns.",
-                  "Owned the user notifications system (email, in-app, push) serving 120K monthly active users.",
-                  "Collaborated with design to establish a design-token-driven theming system.",
-                ],
-              },
-              {
-                role: "Software Engineer I",
-                company: "Stackbase",
-                period: "Jun 2021 – Feb 2022",
-                location: "Remote",
-                bullets: [
-                  "Developed user permissions and RBAC model for a multi-tenant SaaS application.",
-                  "Built REST API endpoints in Node.js / Express backed by PostgreSQL with Prisma ORM.",
-                  "Shipped 3 major feature milestones on schedule while maintaining 98% unit test coverage.",
+                  "N/A",
+                  
                 ],
               },
             ].map((job) => (
@@ -66,17 +41,15 @@ export default function Resume() {
             <div className="border border-[var(--border)] bg-[var(--card)] p-5">
               <div className="flex flex-wrap justify-between gap-2 mb-3">
                 <div>
-                  <h3 className="font-display font-semibold text-base tracking-wide">B.Sc. Computer Science</h3>
-                  <p className="font-mono-cyber text-[10px] text-[var(--primary)]">University of California, Berkeley</p>
+                  <h3 className="font-display font-semibold text-base tracking-wide">B.Sc. Computer Programing</h3>
+                  <p className="font-mono-cyber text-[10px] text-[var(--primary)]">Augusta Technical college, Augusta</p>
                 </div>
                 <span className="font-mono-cyber text-[10px] text-[var(--muted-foreground)]">2017 – 2021</span>
               </div>
               <ul className="space-y-1.5">
                 {[
                   "GPA: 3.9 — Dean's List all semesters",
-                  "Concentration: Distributed Systems & HCI",
-                  "Senior Capstone: Collaborative code editor with CRDT-based sync",
-                  "ACM Club President (2019–2021)",
+                  "Finished with degree and a certification in C# and C++",
                 ].map((b) => (
                   <li key={b} className="flex items-start gap-2 text-xs text-[var(--muted-foreground)]">
                     <span className="text-[var(--primary)] mt-0.5">▸</span>
@@ -92,10 +65,7 @@ export default function Resume() {
         <div className="space-y-6">
           <SidePanel title="TECHNICAL_SKILLS">
             {[
-              { cat: "Languages", items: ["TypeScript", "JavaScript", "Python", "SQL", "Bash"] },
-              { cat: "Frontend", items: ["React", "Next.js", "Tailwind CSS", "GraphQL", "Zustand"] },
-              { cat: "Backend", items: ["Node.js", "Express", "PostgreSQL", "Redis", "Prisma"] },
-              { cat: "DevOps", items: ["Docker", "AWS", "GitHub Actions", "Terraform"] },
+              { cat: "Languages", items: ["C#", "C++", "Python", "SQL", "Java"] },
             ].map(({ cat, items }) => (
               <div key={cat} className="mb-4 last:mb-0">
                 <p className="font-mono-cyber text-[10px] text-[var(--primary)] mb-2">{cat.toUpperCase()}</p>
@@ -112,9 +82,9 @@ export default function Resume() {
 
           <SidePanel title="CERTIFICATIONS">
             {[
-              { name: "AWS Solutions Architect", year: "2024", issuer: "Amazon" },
-              { name: "Google Cloud Professional", year: "2023", issuer: "Google" },
-              { name: "Meta Front-End Developer", year: "2022", issuer: "Meta" },
+              { name: "N/A", year: "N/A", issuer: "N/A" },
+              { name: "N/A", year: "N/A", issuer: "N/A" },
+              { name: "N/A", year: "N/A", issuer: "N/A" },
             ].map((c) => (
               <div key={c.name} className="py-2.5 border-b border-[var(--border)]/40 last:border-0">
                 <p className="text-xs text-[var(--foreground)] font-medium">{c.name}</p>
@@ -126,8 +96,6 @@ export default function Resume() {
           <SidePanel title="LANGUAGES">
             {[
               { lang: "English", level: "Native", pct: 100 },
-              { lang: "Spanish", level: "Fluent", pct: 80 },
-              { lang: "French", level: "Conversational", pct: 55 },
             ].map((l) => (
               <div key={l.lang} className="mb-3 last:mb-0">
                 <div className="flex justify-between mb-1">
@@ -195,6 +163,9 @@ function JobBlock({ role, company, period, location, bullets }: {
           </li>
         ))}
       </ul>
+    </div>
+  );
+}
     </div>
   );
 }
