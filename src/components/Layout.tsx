@@ -39,10 +39,10 @@ export default function Layout() {
         <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
           <NavLink to="/" className="flex items-center gap-3">
             <div className="w-8 h-8 border border-[var(--primary)] neon-border flex items-center justify-center">
-              <span className="font-display font-bold text-sm text-[var(--primary)] neon-text">JS</span>
+              <span className="font-display font-bold text-sm text-[var(--primary)] neon-text">ISA</span>
             </div>
             <span className="font-display font-bold text-lg tracking-widest text-[var(--foreground)] hidden sm:block">
-              JANE<span className="text-[var(--primary)]">_</span>SMITH
+              ISA<span className="text-[var(--primary)]">_</span>RHODES
             </span>
           </NavLink>
 
@@ -110,7 +110,7 @@ export default function Layout() {
 
       {/* footer */}
       <footer className="border-t border-[var(--border)] py-4 px-6 font-mono-cyber text-[10px] text-[var(--muted-foreground)] flex flex-col sm:flex-row justify-between items-center gap-2">
-        <span>© 2026 JANE_SMITH — ALL_RIGHTS_RESERVED</span>
+        <span>© 2026 ISA_RHODES — ALL_RIGHTS_RESERVED</span>
         <div className="flex gap-4">
           <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--primary)] transition-colors">GITHUB</a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--primary)] transition-colors">LINKEDIN</a>
@@ -118,5 +118,5 @@ export default function Layout() {
         </div>
       </footer>
     </div>
-  );
+  ); // <--- Closing brace added here
 }
