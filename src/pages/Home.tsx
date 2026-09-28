@@ -1,25 +1,26 @@
-mport { Link } from "react-router";
+import { Link } from "react-router";
 import { useEffect, useState } from "react";
 
-const ticker = [
-  "OPEN_TO_WORK",
-];
+const ticker = ["OPEN_TO_WORK", "BUILDING_TOOLS", "SOLVING_PROBLEMS"];
 
 function TypewriterText({ text }: { text: string }) {
   const [displayed, setDisplayed] = useState("");
+
   useEffect(() => {
     setDisplayed("");
     let i = 0;
-    const t = setInterval(() => {
+    const interval = setInterval(() => {
       if (i < text.length) {
         setDisplayed(text.slice(0, i + 1));
-        i++;
+        i += 1;
       } else {
-        clearInterval(t);
+        clearInterval(interval);
       }
     }, 60);
-    return () => clearInterval(t);
+
+    return () => clearInterval(interval);
   }, [text]);
+
   return <span>{displayed}</span>;
 }
 
@@ -27,15 +28,21 @@ export default function Home() {
   const [tickerIndex, setTickerIndex] = useState(0);
 
   useEffect(() => {
-    const t = setInterval(() => {
-      setTickerIndex((i) => (i + 1) % ticker.length);
+    const interval = setInterval(() => {
+      setTickerIndex((index) => (index + 1) % ticker.length);
     }, 3000);
-    return () => clearInterval(t);
+
+    return () => clearInterval(interval);
   }, []);
+
+  const statCards = [
+    { label: "FOCUS", value: "UI/UX" },
+    { label: "STACK", value: "C#" },
+    { label: "MODE", value: "REMOTE" },
+  ];
 
   return (
     <div className="relative overflow-hidden">
-      {/* purple radial glow */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] pointer-events-none"
         style={{
@@ -44,11 +51,9 @@ export default function Home() {
         }}
       />
 
-      {/* hero section */}
       <section className="relative max-w-6xl mx-auto px-6 pt-20 pb-24 md:pt-32 md:pb-36">
         <div className="grid md:grid-cols-[1fr_auto] gap-12 items-center">
           <div>
-            {/* label */}
             <div className="flex items-center gap-3 mb-6">
               <span className="block w-8 h-px bg-[var(--primary)]" />
               <span className="font-mono-cyber text-xs text-[var(--primary)] tracking-widest">
@@ -56,13 +61,15 @@ export default function Home() {
               </span>
             </div>
 
-            {/* name */}
-            <h1 className="font-display font-bold text-5xl sm:text-7xl md:text-8xl leading-none tracking-tight mb-4 glitch-container flicker" data-text="Isa Rhodes">
-              Isa<br />
+            <h1
+              className="font-display font-bold text-5xl sm:text-7xl md:text-8xl leading-none tracking-tight mb-4 glitch-container flicker"
+              data-text="Isa Rhodes"
+            >
+              Isa
+              <br />
               <span className="text-[var(--primary)] neon-text">Rhodes</span>
             </h1>
 
-            {/* dynamic role */}
             <div className="font-mono-cyber text-sm sm:text-base text-[var(--muted-foreground)] mb-6 h-6">
               <span className="text-[var(--neon-cyan)]">&gt; </span>
               <TypewriterText key={tickerIndex} text={ticker[tickerIndex]} />
@@ -70,7 +77,8 @@ export default function Home() {
             </div>
 
             <p className="text-[var(--muted-foreground)] max-w-lg leading-relaxed mb-10 text-sm md:text-base">
-            
+              I build clean, performant experiences across front-end and back-end work,
+              with a focus on thoughtful UX, strong fundamentals, and production-ready code.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -89,20 +97,17 @@ export default function Home() {
             </div>
           </div>
 
-          {/* stat panel */}
           <div className="hidden md:block">
             <div className="relative border border-[var(--border)] bg-[var(--card)] p-6 w-56 neon-border">
               <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[var(--primary)]" />
               <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[var(--primary)]" />
-              {[
-
-              ].map((s) => (
-                <div key={s.label} className="mb-4 last:mb-0">
+              {statCards.map((stat) => (
+                <div key={stat.label} className="mb-4 last:mb-0">
                   <div className="font-mono-cyber text-[10px] text-[var(--muted-foreground)] mb-0.5">
-                    {s.label}
+                    {stat.label}
                   </div>
                   <div className="font-display font-bold text-3xl text-[var(--primary)] neon-text">
-                    {s.value}
+                    {stat.value}
                   </div>
                 </div>
               ))}
@@ -111,18 +116,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ticker bar */}
       <div className="border-y border-[var(--border)] bg-[var(--muted)] py-2 overflow-hidden">
         <div className="ticker-track flex gap-12 whitespace-nowrap w-max">
-          {[...ticker, ...ticker].map((t, i) => (
-            <span key={i} className="font-mono-cyber text-[10px] text-[var(--muted-foreground)] tracking-widest">
-              ◆ {t}
+          {[...ticker, ...ticker].map((item, index) => (
+            <span
+              key={`${item}-${index}`}
+              className="font-mono-cyber text-[10px] text-[var(--muted-foreground)] tracking-widest"
+            >
+              ◆ {item}
             </span>
           ))}
         </div>
       </div>
 
-      {/* featured skills */}
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="flex items-center gap-4 mb-10">
           <span className="font-mono-cyber text-[10px] text-[var(--primary)]">03/</span>
@@ -131,10 +137,7 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-          {[
-            "C++", "C#", "Javascript", "Phython",
-            "Sql", "Unity", "Blender",
-          ].map((tech) => (
+          {["C++", "C#", "JavaScript", "Python", "SQL", "Unity"].map((tech) => (
             <div
               key={tech}
               className="border border-[var(--border)] bg-[var(--card)] px-3 py-3 text-center font-mono-cyber text-[11px] text-[var(--muted-foreground)] neon-border-hover hover:text-[var(--primary)] hover:border-[var(--primary)]/50 transition-all duration-200 cursor-default"
@@ -145,7 +148,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA strip */}
       <section className="border-t border-[var(--border)] bg-[var(--card)]">
         <div className="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-[1fr_auto] gap-8 items-center">
           <div>
@@ -153,7 +155,7 @@ export default function Home() {
               READY TO <span className="text-[var(--primary)] neon-text">BUILD</span> SOMETHING?
             </h2>
             <p className="font-mono-cyber text-xs text-[var(--muted-foreground)]">
-              Available for any roles and select freelance projects.
+              Available for design, development, and problem-solving collaborations.
             </p>
           </div>
           <Link
