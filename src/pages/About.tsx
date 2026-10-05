@@ -1,11 +1,8 @@
 export default function About() {
-  const interests = [
-    "Open Source", "Systems Design", "Game Dev", "3D Graphics"
-  ];
+  const interests = ["Open Source", "Systems Design", "Game Dev", "3D Graphics"];
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
-      {/* section header */}
       <div className="flex items-center gap-4 mb-14">
         <span className="font-mono-cyber text-[10px] text-[var(--primary)]">01/</span>
         <h1 className="font-display font-bold text-3xl tracking-widest">ABOUT_ME</h1>
@@ -13,15 +10,13 @@ export default function About() {
       </div>
 
       <div className="grid md:grid-cols-[2fr_1fr] gap-12 md:gap-16">
-        {/* left */}
         <div>
-          {/* avatar + name block */}
           <div className="flex items-start gap-6 mb-10">
             <div className="relative shrink-0">
               <div className="w-24 h-24 border border-[var(--primary)] neon-border overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&auto=format"
-                  alt="Isa Rhodes — software engineer"
+                  alt="Isa Rhodes"
                   className="w-full h-full object-cover grayscale"
                 />
               </div>
@@ -29,41 +24,41 @@ export default function About() {
             </div>
             <div>
               <h2 className="font-display font-bold text-2xl tracking-wide mb-1">Isa Rhodes</h2>
-              <p className="font-mono-cyber text-xs text-[var(--primary)] mb-1"></p>
+              <p className="font-mono-cyber text-xs text-[var(--primary)] mb-1">Software Developer</p>
               <p className="font-mono-cyber text-[10px] text-[var(--muted-foreground)]">
-                📍 Augusta, GA · Remote-Friendly
+                📍 Augusta, GA · Remote-friendly
               </p>
             </div>
           </div>
 
           <div className="space-y-4 text-[var(--muted-foreground)] text-sm leading-relaxed border-l-2 border-[var(--border)] pl-5">
             <p>
-              I am freshly graduated computer programer with interests in furthering my 
-              carrer in both front and back in development. I have skills in C#, C++, Html and CSS
-              with some proficiency in java, javascript, phython and QSL.
+              I am a computer programmer focused on building thoughtful digital experiences
+              that balance strong technical foundations with practical usability.
             </p>
             <p>
-              I care deeply about performance and accessibility.
+              My work spans front-end interfaces, back-end logic, and problem-solving through
+              clean, maintainable code. I enjoy turning rough ideas into polished, useful tools.
             </p>
           </div>
 
-          {/* interests */}
           <div className="mt-10">
-            <p className="font-mono-cyber text-[10px] text-[var(--muted-foreground)] mb-3 tracking-widest">INTERESTS &amp; HOBBIES</p>
+            <p className="font-mono-cyber text-[10px] text-[var(--muted-foreground)] mb-3 tracking-widest">
+              INTERESTS &amp; HOBBIES
+            </p>
             <div className="flex flex-wrap gap-2">
-              {interests.map((i) => (
+              {interests.map((interest) => (
                 <span
-                  key={i}
+                  key={interest}
                   className="font-mono-cyber text-[10px] border border-[var(--border)] px-3 py-1 text-[var(--muted-foreground)] hover:border-[var(--primary)] hover:text-[var(--primary)] transition-all duration-200 cursor-default"
                 >
-                  {i}
+                  {interest}
                 </span>
               ))}
             </div>
           </div>
         </div>
 
-        {/* right — system specs panel */}
         <div className="space-y-4">
           <div className="relative border border-[var(--border)] bg-[var(--card)] p-5 neon-border">
             <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-[var(--primary)]" />
@@ -71,11 +66,11 @@ export default function About() {
             <p className="font-mono-cyber text-[10px] text-[var(--primary)] mb-4 tracking-widest">SYS_INFO</p>
             {[
               { key: "NAME", val: "Isa Rhodes" },
-              { key: "ROLE", val: "" },
-              { key: "EXP", val: "" },
+              { key: "ROLE", val: "Developer" },
+              { key: "EXP", val: "2+ Years" },
               { key: "LOCATION", val: "Augusta, GA" },
               { key: "STATUS", val: "Open to Work" },
-              { key: "PREF", val: "any" },
+              { key: "PREF", val: "Remote / Hybrid" },
             ].map(({ key, val }) => (
               <div key={key} className="flex justify-between py-2 border-b border-[var(--border)]/40 last:border-0">
                 <span className="font-mono-cyber text-[10px] text-[var(--muted-foreground)]">{key}</span>
@@ -84,24 +79,24 @@ export default function About() {
             ))}
           </div>
 
-          {/* values */}
           <div className="border border-[var(--border)] bg-[var(--card)] p-5">
             <p className="font-mono-cyber text-[10px] text-[var(--primary)] mb-4 tracking-widest">CORE_VALUES</p>
             {[
               "Clean, readable code",
               "Thoughtful UX decisions",
               "Clear communication",
-            ].map((v, i) => (
-              <div key={v} className="flex items-center gap-2 py-1.5">
-                <span className="font-mono-cyber text-[10px] text-[var(--primary)]">{String(i + 1).padStart(2, "0")}</span>
-                <span className="text-xs text-[var(--muted-foreground)]">{v}</span>
+            ].map((value, index) => (
+              <div key={value} className="flex items-center gap-2 py-1.5">
+                <span className="font-mono-cyber text-[10px] text-[var(--primary)]">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="text-xs text-[var(--muted-foreground)]">{value}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* timeline */}
       <div className="mt-16">
         <div className="flex items-center gap-4 mb-8">
           <span className="font-mono-cyber text-[10px] text-[var(--primary)]">02/</span>
@@ -111,9 +106,23 @@ export default function About() {
 
         <div className="space-y-0">
           {[
-            { year: "PRESENT", role: "", company: "", desc: "" },
-          ].map((item, i) => (
-            <div key={i} className="grid md:grid-cols-[180px_1fr] gap-4 md:gap-8 border-b border-[var(--border)]/40 py-5 last:border-0">
+            {
+              year: "2024 — PRESENT",
+              role: "Developer / Problem Solver",
+              company: "Freelance & Independent Projects",
+              desc: "Building practical interfaces, prototypes, and tools for personal and client work with a focus on polished execution.",
+            },
+            {
+              year: "2021 — 2024",
+              role: "Programmer",
+              company: "Academic & Project-Based Experience",
+              desc: "Worked on application and software projects spanning C#, C++, front-end development, and technical problem solving.",
+            },
+          ].map((item) => (
+            <div
+              key={`${item.year}-${item.role}`}
+              className="grid md:grid-cols-[180px_1fr] gap-4 md:gap-8 border-b border-[var(--border)]/40 py-5 last:border-0"
+            >
               <div>
                 <p className="font-mono-cyber text-[10px] text-[var(--primary)]">{item.year}</p>
               </div>
@@ -126,9 +135,6 @@ export default function About() {
           ))}
         </div>
       </div>
-    </div>
-  );
-}
     </div>
   );
 }
